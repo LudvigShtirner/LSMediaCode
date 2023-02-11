@@ -7,8 +7,6 @@
 
 import CoreGraphics
 
-import SupportCode
-
 /// Типы форматов представления цвета в изображениях
 public enum PixelFormat: String {
     case rgba
