@@ -3,4 +3,8 @@ public struct LSMediaCode {
 
     public init() {
     }
+    
+    public static func buildAssetImageExtractor() -> AssetImageExtractor {
+        return AssetImageExtractorBase()
+    }
 }
