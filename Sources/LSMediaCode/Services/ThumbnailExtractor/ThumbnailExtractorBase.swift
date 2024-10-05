@@ -22,10 +22,11 @@ final class ThumbnailExtractorBase: ThumbnailExtractor {
     func extractThumbnail(forAsset asset: PHAsset,
                           thumbnailSize: CGSize,
                           contentMode: PHImageContentMode,
+                          deliveryMode: PHImageRequestOptionsDeliveryMode,
                           completionBlock: @escaping (ThumbnailExtractResult?) -> Void) -> PHImageRequestID {
         let options = PHImageRequestOptions()
         options.isNetworkAccessAllowed = true
-        options.deliveryMode = .opportunistic
+        options.deliveryMode = deliveryMode
         
         return imageManager.requestImage(for: asset,
                                          targetSize: thumbnailSize,

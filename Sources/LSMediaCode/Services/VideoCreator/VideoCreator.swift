@@ -7,10 +7,11 @@
 
 // Apple
 import UIKit
+import AVFoundation
 
 public protocol VideoCreator: AnyObject {
     func createVideo(from photo: UIImage,
                      options: VideoCreateOptions,
                      progress: ((Double) -> Void)?,
-                     completion: @escaping (Result<URL, VideoCreatorError>) -> Void)
+                     completion: @escaping (Result<AVURLAsset, VideoCreatorError>) -> Void)
 }

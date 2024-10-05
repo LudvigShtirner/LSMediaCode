@@ -12,7 +12,8 @@ public enum VideoCreatorError: Error {
     case outputPathNotEmpty(Error)
     case canNotCreateWriter(Error)
     case canNotAddInput
-    case canNotStartWriting
+    case canNotStartWriting(Error?)
     case pixelBufferPoolNotCreated
     case bufferNotAppended
+    case cancelled
 }

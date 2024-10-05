@@ -15,6 +15,7 @@ public protocol ThumbnailExtractor {
     func extractThumbnail(forAsset asset: PHAsset,
                           thumbnailSize: CGSize,
                           contentMode: PHImageContentMode,
+                          deliveryMode: PHImageRequestOptionsDeliveryMode,
                           completionBlock: @escaping (ThumbnailExtractResult?) -> Void) -> PHImageRequestID
     func cancelThumbnailExtraction(imageRequestID: PHImageRequestID)
 }

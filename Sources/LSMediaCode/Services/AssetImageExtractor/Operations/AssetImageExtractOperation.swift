@@ -46,6 +46,7 @@ final class AssetImageExtractOperation: AsyncOperation {
         identifier = thumbnailExtractor.extractThumbnail(forAsset: phAsset,
                                                          thumbnailSize: requestedSize,
                                                          contentMode: .aspectFit,
+                                                         deliveryMode: .highQualityFormat,
                                                          completionBlock: { [weak self] result in
             guard let self else { return }
             if self.isCancelled {
